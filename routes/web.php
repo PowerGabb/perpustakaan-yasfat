@@ -17,7 +17,7 @@ use App\Http\Controllers\Auth\SocialiteController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.main');
 });
 
 Auth::routes();
