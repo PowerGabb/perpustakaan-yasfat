@@ -17,7 +17,7 @@ use App\Http\Controllers\Auth\SocialiteController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.main');
 });
 
 Auth::routes();
@@ -28,4 +28,9 @@ Auth::routes();
 Route::get('/auth/{provider}', [SocialiteController::class, 'redirectToProvider']);
 Route::get('/auth/{provider}/callback', [SocialiteController::class, 'handleProvideCallback']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+Route::get('/booklist', function () {
+    return view('book.book-list');
+});
+Route::get('/dashboard', function () {
+    return view('book.dashboard');
+});
