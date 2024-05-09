@@ -20,5 +20,40 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        Book::create([
+            'title' => 'sdsdsd',
+            'slug' => 'asassaas',
+            'description' => 'sddssddssd',
+            'author_id' => 1,
+            'publisher_id' => 1,
+            'publication_year' => '2025',
+            'jumlah' => 5,
+            'rak_id' => 1,
+            'cover' => '1.png'
+        ]);
+
+        Book::create([
+            'title' => 'sdsdsd',
+            'slug' => 'asassaas',
+            'description' => 'sddssddssd',
+            'author_id' => 1,
+            'publisher_id' => 1,
+            'publication_year' => '2025',
+            'jumlah' => 5,
+            'rak_id' => 1,
+            'cover' => '1.png'
+        ]);
+        Book::create([
+            'title' => 'sdsdsd',
+            'slug' => 'asassaas',
+            'description' => 'sddssddssd',
+            'author_id' => 1,
+            'publisher_id' => 1,
+            'publication_year' => '2025',
+            'jumlah' => 5,
+            'rak_id' => 1,
+            'cover' => '1.png'
+        ]);
     }
 }
