@@ -2,19 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Book;
+use App\Models\Categories;
+use App\Models\Category;
+use App\Models\Rent;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+ 
+   
 
     /**
      * Show the application dashboard.
@@ -23,6 +20,24 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+
+        $data = Book::with('categories')->get();
+        return view('public.index', compact('data'));
+    }
+
+    public function dashboard(){
+
+
+        $books = Book::count();
+        $categories = Categories::count();
+        $rents = Rent::where('status', 'rented')->count();
+        return view('dashboard', compact('books', 'categories', 'rents'));
+    }
+
+    public function book($id){
+
+        $book = Book::with('categories', 'noRak', 'author', 'publisher' )->find($id);
+        return view('public.book-detail', compact('book'));
+
     }
 }

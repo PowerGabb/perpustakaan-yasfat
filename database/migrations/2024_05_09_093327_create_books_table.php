@@ -27,7 +27,7 @@ return new class extends Migration
             $table->unsignedBigInteger('publisher_id');
             $table->foreign('publisher_id')->references('id')->on('publishers')->onDelete('cascade');
 
-            $table->integer('publication_year')->nullable();
+            $table->date('publication_year')->nullable();
             $table->integer('jumlah')->nullable();
             $table->string('cover')->nullable();
             $table->timestamps();
