@@ -36,3 +36,12 @@ Route::get('/booklist', function () {
 Route::get('/dashboard', function () {
     return view('book.dashboard');
 });
+Route::get('/pinjam', function () {
+    return view('book.pinjam');
+});
+Route::get('/tambah-buku', function () {
+    return view('book.tambah-buku');
+});
+Route::get('/index', function () {
+    return view('book.index');
+});
