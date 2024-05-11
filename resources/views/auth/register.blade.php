@@ -97,13 +97,13 @@
     <title>SB Admin 2 - Register</title>
 
     <!-- Custom fonts for this template-->
-    <link href="{{ asset('Figma/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('Figma/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="{{ asset('Figma/css/figmacss.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('Figma/css/figmacss.min.css') }}" rel="stylesheet">
 
 </head>
 
@@ -121,48 +121,55 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
                             </div>
-                            <form class="user">
+                            <form class="user" method="POST" action="{{ route('register') }}">
+                                @csrf
                                 <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="exampleFirstName"
-                                            placeholder="First Name">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="exampleLastName"
-                                            placeholder="Last Name">
+                                    <div class="col-sm-12 mb-3 mb-sm-12">
+                                        <input type="text" class="form-control form-control-user"
+                                            id="exampleFirstName" placeholder="First Name" name="name">
+                                            @error('name')
+                                                <small><span class="text-danger">{{ $message }}</span></small>
+                                            @enderror
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Email Address">
+                                        placeholder="Email Address" name="email">
+                                    @error('email')
+                                        <small><span class="text-danger">{{ $message }}</span></small>
+                                    @enderror
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <input type="password" class="form-control form-control-user"
-                                            id="exampleInputPassword" placeholder="Password">
+                                            id="exampleInputPassword" placeholder="Password" name="password">
+                                        @error('password')
+                                            <small><span class="text-danger">{{ $message }}</span></small>
+                                        @enderror
                                     </div>
                                     <div class="col-sm-6">
                                         <input type="password" class="form-control form-control-user"
-                                            id="exampleRepeatPassword" placeholder="Repeat Password">
+                                            id="exampleRepeatPassword" placeholder="Repeat Password"
+                                            name="password_confirmation">
+                                        @error('password_confirmation')
+                                            <small><span class="text-danger">{{ $message }}</span></small>
+                                        @enderror
                                     </div>
                                 </div>
-                                <a href="login.html" class="btn btn-primary btn-user btn-block">
-                                    Register Account
-                                </a>
+                                <button class="btn btn-primary btn-user btn-block" type="submit">Register
+                                    Account</button>
                                 <hr>
-                                <a href="index.html" class="btn btn-google btn-user btn-block">
+                                <a href="/auth/google" class="btn btn-google btn-user btn-block">
                                     <i class="fab fa-google fa-fw"></i> Register with Google
                                 </a>
-                                <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                                    <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
+                                <a href="/auth/github" class="btn btn-facebook btn-user btn-block">
+                                    <i class="fab fa-github fa-fw"></i> Register with Github
                                 </a>
                             </form>
                             <hr>
+
                             <div class="text-center">
-                                <a class="small" href="forgot-password.html">Forgot Password?</a>
-                            </div>
-                            <div class="text-center">
-                                <a class="small" href="login.html">Already have an account? Login!</a>
+                                <a class="small" href="/login">Already have an account? Login!</a>
                             </div>
                         </div>
                     </div>
@@ -173,14 +180,14 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="{{ asset('Figma/vendor/jquery/jquery.min.js')}}"></script>
-    <script src="{{ asset('Figma/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{ asset('Figma/vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('Figma/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="{{ asset('Figma/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
+    <script src="{{ asset('Figma/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="{{ asset('Figma/js/figma.min.js')}}"></script>
+    <script src="{{ asset('Figma/js/figma.min.js') }}"></script>
 
 </body>
 
