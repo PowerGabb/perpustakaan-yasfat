@@ -12,14 +12,13 @@
     <title>Perpustakaan</title>
 
     <!-- Custom fonts for this template-->
-    <link href="{{ asset('Figma/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('mydesign/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href={{ asset('Figma/css/figmacss.min.css') }} rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('Figma/js/sb-admin-2.js') }}">
+    <link href="{{ asset('mydesign/css/sb-admin-2.min.css')}}" rel="stylesheet">
 
 </head>
 
@@ -44,44 +43,41 @@
 
 
             @if (Auth::check())
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="/login">
-                    <i class="fas fa-solid fa-home"></i>
-                    <span>Login</span></a>
-            </li>
+                <!-- Nav Item - Dashboard -->
+                <li class="nav-item active">
+                    <a class="nav-link" href="/login">
+                        <i class="fas fa-solid fa-home"></i>
+                        <span>Login</span></a>
+                </li>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider">
+                <!-- Divider -->
+                <hr class="sidebar-divider">
 
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Menu
-            </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-solid fa-book"></i>
-                    <span>Buku</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="/booklist">List buku</a>
-                        <a class="collapse-item" href="/">Tambah buku</a>
-                    </div>
+                <!-- Heading -->
+                <div class="sidebar-heading">
+                    Menu
                 </div>
-            </li>
 
+                <!-- Nav Item - Pages Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                        aria-expanded="true" aria-controls="collapseTwo">
+                        <i class="fas fa-solid fa-book"></i>
+                        <span>Buku</span>
+                    </a>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <a class="collapse-item" href="/booklist">List buku</a>
+                            <a class="collapse-item" href="/">Tambah buku</a>
+                        </div>
+                    </div>
+                </li>
             @else
-
-            <li class="nav-item active">
-                <a class="nav-link" href="/dashboard">
-                    <i class="fas fa-solid fa-home"></i>
-                    <span>Dashboard</span></a>
-            </li>
-
+                <li class="nav-item active">
+                    <a class="nav-link" href="/dashboard">
+                        <i class="fas fa-solid fa-home"></i>
+                        <span>Dashboard</span></a>
+                </li>
             @endif
 
 
@@ -245,17 +241,22 @@
     </div>
 
     <!-- Bootstrap JavaScript-->
-    <script src="{{ asset('Figma/vendor/jquery/jquery.min.js') }}"></script>
-    <script src="{{ asset('Figma/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('Figma/js/figma.min.js') }}"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="{{ asset('mydesign/vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{ asset('mydesign/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
+    <!-- Core plugin JavaScript-->
+    <script src="{{ asset('mydesign/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
 
-    <script src="{{ asset('Figma/js/figma.min.js') }}"></script>
-    <script src="{{ asset('Figma/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-    </script>
+    <!-- Custom scripts for all pages-->
+    <script src="{{ asset('mydesign/js/sb-admin-2.min.js')}}"></script>
 
+    <!-- Page level plugins -->
+    <script src="{{ asset('mydesign/vendor/chart.js/Chart.min.js')}}"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="{{ asset('mydesign/js/demo/chart-area-demo.js')}}"></script>
+    <script src="{{ asset('mydesign/js/demo/chart-pie-demo.js')}}"></script>
 </body>
 
 </html>
