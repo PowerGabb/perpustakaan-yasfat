@@ -18,7 +18,7 @@
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="{{ asset('figma/css/sb-admin-2.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('figma/css/figmacss.min.css') }}" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
 
@@ -33,11 +33,11 @@
         <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/dashboard">
                 <div class="sidebar-brand-icon rotate-n-15">
                     {{-- <i class="fas fa-laugh-wink"></i> --}}
                 </div>
-                <div class="sidebar-brand-text mx-3">Perpustakaan<sup>#1</sup></div>
+                <div class="sidebar-brand-text mx-3">Perpustakaan</div>
             </a>
 
             <!-- Divider -->
@@ -152,7 +152,7 @@
                             <div class="bg-white py-2 collapse-inner rounded">
                                 <h6 class="collapse-header">User:</h6>
                                 <a class="collapse-item" href="/users">List User</a>
-                                <a class="collapse-item" href="/users/activation">Aktivasi User</a>
+                                <a class="collapse-item" href="/users-activation">Aktivasi User</a>
                                 <a class="collapse-item" href="/users/create">Tambah User</a>
                             </div>
                         </div>
@@ -509,7 +509,7 @@
     <script src="{{ asset('figma/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="{{ asset('figma/js/sb-admin-2.min.js') }}"></script>
+    <script src="{{ asset('figma/js/figmajs.min.js') }}"></script>
 
     <!-- Page level plugins -->
     <script src="{{ asset('figma/vendor/chart.js/Chart.min.js') }}"></script>

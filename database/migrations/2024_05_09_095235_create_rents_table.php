@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('status')->nullable();
             $table->string('assign')->nullable();
             $table->date('rent_at')->nullable();
+            $table->date('return_at')->nullable();
             $table->date('rent_time_limit')->nullable();
             $table->timestamps();
         });
