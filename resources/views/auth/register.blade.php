@@ -103,7 +103,7 @@
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="{{ asset('/figma/css/sb-admin-2.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('/figma/css/figmacss.min.css')}}" rel="stylesheet">
 
 </head>
 
@@ -115,7 +115,9 @@
             <div class="card-body p-0">
                 <!-- Nested Row within Card Body -->
                 <div class="row">
-                    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                    <div class="col-lg-5 d-none d-lg-block ">
+                        <img src="{{ asset('/bglogin/login.png')}}" alt="Login Image" class="img-fluid">
+                    </div>
                     <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-center">
@@ -187,7 +189,7 @@
     <script src="{{ asset('figma/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="{{ asset('figma/js/sb-admin-2.min.js')}}"></script>
+    <script src="{{ asset('figma/js/figmajs.min.js')}}"></script>
 </body>
 
 </html>

@@ -51,5 +51,13 @@
                 </div>
             </div>
         </div>
+
+        <dic class="col-12">
+            <div class="card shadow-lg rounded mb-4">
+                <div class="body">
+                    <img src="{{ asset('/bglogin/welcome.png')}}" alt="" class="img-fluid w-100">
+                </div>
+            </div>
+        </dic>
     </div>
 @endsection
