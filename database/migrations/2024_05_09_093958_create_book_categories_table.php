@@ -20,8 +20,8 @@ return new class extends Migration
             $table->unsignedBigInteger('book_id');
             $table->foreign('book_id')->references('id')->on('books')->onDelete('cascade');
 
-            $table->unsignedBigInteger('category_id');
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->unsignedBigInteger('categories_id');
+            $table->foreign('categories_id')->references('id')->on('categories')->onDelete('cascade');
             $table->timestamps();
         });
     }
